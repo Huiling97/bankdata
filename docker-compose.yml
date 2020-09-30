@@ -1,0 +1,19 @@
+users:
+    image: huiling97/bankdata-users:latest
+    ports:
+        - "8091:8090"
+
+accounts:
+    image: huiling97/bankdata-accounts:latest
+    ports:
+        - "8092:8090"
+
+transactions:
+    image: huiling97/bankdata-transactions:latest
+    ports:
+        - "8093:8090"
+
+messages:
+    image: huiling97/bankdata-messages:latest
+    ports:
+        - "8094:8090"
