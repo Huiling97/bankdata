@@ -11,7 +11,7 @@ RUN npm install -g express-generator
 RUN npm install express --save
 RUN npm install body-parser --save
 RUN npm install mysql --save
-RUN useradd -ms /bin/bash user
+RUN useradd -ms /bin/sh user
 COPY myapp.js /home/user/myapp.js
 COPY start.sh /home/user/start.sh
 RUN chmod a+x /home/user/start.sh
