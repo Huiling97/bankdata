@@ -7,10 +7,12 @@ ENV TZ=Asia/Singapore
 RUN apt-get update
 RUN apt-get install -y nodejs npm
 ENV USER root
-RUN npm install init
-RUN npm install express
-RUN npm install body-parser
-RUN npm install mysql
+RUN npm install -g express-generator
+RUN npm install express --save
+RUN npm install -g body-parser
+RUN npm install body-parser --save
+RUN npm install -g mysql
+RUN npm install mysql --save
 RUN useradd -ms /bin/bash user
 COPY myapp.js /home/user/myapp.js
 COPY start.sh /home/user/start.sh
