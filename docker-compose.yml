@@ -1,7 +1,18 @@
-users:
+version: '3'
+services:
+  app:
+    container_name: huiling97/bankdata
+    restart: always
+    build: .
+    ports:
+      - '8090:8090'
+    links:
+      - users
+  users:
+    container_name: users
     image: huiling97/bankdata-users:latest
     ports:
-        - "8091:8090"
+      - "8091:8090"
 
 accounts:
     image: huiling97/bankdata-accounts:latest
